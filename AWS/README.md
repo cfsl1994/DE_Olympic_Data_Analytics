@@ -2,8 +2,8 @@
 ## Steps
 
 
-#### AWS LAMBDA:
-
+##### AWS LAMBDA:
+###### General configuration
 
 ## Architecture-Diagram
 ![Architecture-Diagram](Olympic-Data-Analytics-Aws.jpg)
