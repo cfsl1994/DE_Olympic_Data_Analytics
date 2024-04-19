@@ -17,7 +17,7 @@
         - key -> CSV_URL_PATH 
         - value -> https://raw.githubusercontent.com/YOUR_GITHUB/main/data/
         - key -> S3_BUCKET
-        - value -> YOUR BUCKET
+        - value -> YOUR RAW ZONE BUCKET
 
 ###### Code
         - code -> lambda_function.py
@@ -31,11 +31,11 @@
 
 #### AWS S3:
 ###### General S3 Raw Data
-        - bucket -> YOUR BUCKET RAW DATA
+        - bucket -> YOUR RAW ZONE BUCKET
         - objetct -> olympic-data-analytics/
 
-###### General S3 Raw Data
-        - bucket -> YOUR BUCKET STAGE DATA
+###### General S3 Stage Data
+        - bucket -> YOUR RAW ZONE BUCKET
         - objetct -> olympic-data-analytics/
 
 #### AWS GLUE:
@@ -50,6 +50,98 @@
 ###### Advanced properties
         - Script path -> YOUR SCRIPT PATH BUCKET
         - Spark UI logs path -> YOUR LOG PATH BUCKET
+
+###### ETL Visual
+        - Data Source Properties - S3
+
+        - Name -> Athletes Source
+        - S3 source type ->  S3 location
+        - S3 URL -> s3://YOUR RAW ZONE BUCKET/olympic-data-analytics/Athletes.csv
+        - Data format -> CSV
+        - Delimiter -> Semicolon (;)
+        - Quote character -> Double quote (")
+        - First line of source file contains column headers
+
+        - Name -> Teams Source
+        - S3 source type ->  S3 location
+        - S3 URL -> s3://YOUR RAW ZONE BUCKET/olympic-data-analytics/Teams.csv
+        - Data format -> CSV
+        - Delimiter -> Semicolon (;)
+        - Quote character -> Double quote (")
+        - First line of source file contains column headers
+
+        - Name -> Medals Source
+        - S3 source type ->  S3 location
+        - S3 URL -> s3://YOUR RAW ZONE BUCKET/olympic-data-analytics/Medals.csv
+        - Data format -> CSV
+        - Delimiter -> Semicolon (;)
+        - Quote character -> Double quote (")
+        - First line of source file contains column headers
+
+        - Name -> Entriesgender Source
+        - S3 source type ->  S3 location
+        - S3 URL -> s3://YOUR RAW ZONE BUCKET/olympic-data-analytics/EntriesGender.csv
+        - Data format -> CSV
+        - Delimiter -> Semicolon (;)
+        - Quote character -> Double quote (")
+        - First line of source file contains column headers
+
+        - Name -> Coaches Source
+        - S3 source type ->  S3 location
+        - S3 URL -> s3://YOUR RAW ZONE BUCKET/olympic-data-analytics/Coaches.csv
+        - Data format -> CSV
+        - Delimiter -> Semicolon (;)
+        - Quote character -> Double quote (")
+        - First line of source file contains column headers
+
+        - Transform
+
+        - Name -> Change Schema Athletes
+        - Node parents -> Athletes Source
+        - Change Schema (Apply mapping)
+        	- 	Source Key	Target Key	Data type
+        		name 		PersonName	string
+        		noc		Country		string
+        		discipline	discipline	string
+
+        - Name -> Change Schema Teams
+        - Node parents -> Teams Source
+        - Change Schema (Apply mapping)
+        	-	Source Key	Target Key	Data type
+        		name		TeamName	string
+        		discipline	discipline	string
+        		noc		Country		string
+        		event		event		string
+
+        - Name -> Change Schema Medals
+        - Node parents -> Medals Source
+        - Change Schema (Apply mapping)
+        	-	Source Key	Target Key	Data type
+        		rank		rank		string
+        		team/noc	Team_Country	string
+        		gold		gold		string
+        		silver		silver		string
+        		bronze		bronze		string
+        		total		total		string
+        		rank by total	rank_by_total	string
+
+        - Name -> Change Schema Entriesgender
+        - Node parents -> Entriesgender Source
+        - Change Schema (Apply mapping)
+        	-	Source Key	Target Key	Data type
+        		discipline	discipline	string
+        		female		female		string
+        		male		male		string
+        		total		total		string
+
+        - Name -> Change Schema Coaches
+        - Node parents -> Coaches Source
+        - Change Schema (Apply mapping)
+        	-	Source Key	Target Key	Data type
+        		name		name		string
+        		noc		Country		string
+        		discipline	discipline	string
+        		event		event		string
 
 ## Architecture-Diagram
 ![Architecture-Diagram](Olympic-Data-Analytics-Aws.jpg)
