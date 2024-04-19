@@ -208,5 +208,20 @@
                         	- Escape character -> Backslash (\)
                         	- First row as header -> Check
 
+#### AZURE STORAGE:
+###### General RAW ZONE STORAGE ACCOUNT
+        - storage account -> YOUR RAW ZONE STORAGE ACCOUNT
+        - resouce group -> data-engineering
+        - subscription -> YOUR SUBSCRIPTION
+        - container -> olympic-data-analytics
+        - properties -> Data Lake Storage -> Hierarchical namespace
+
+###### General STAGE ZONE STORAGE ACCOUNT
+        - storage account -> YOUR STAGE ZONE STORAGE ACCOUNT
+        - resouce group -> data-engineering
+        - subscription -> YOUR SUBSCRIPTION
+        - container -> olympic-data-analytics
+        - properties -> Data Lake Storage -> Hierarchical namespace
+
 ## Architecture-Diagram
 ![Architecture-Diagram](Olympic-Data-Analytics-Azure.jpg)
