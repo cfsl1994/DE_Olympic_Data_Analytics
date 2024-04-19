@@ -4,4 +4,4 @@
 - [Architecture-Diagram](##Architecture-Diagram)
 
 ## Architecture-Diagram
-![Architecture-Diagram](Olympic Data Analytics-Aws.jpg)
+![Architecture-Diagram](Olympic-Data-Analytics-Aws.jpg)
