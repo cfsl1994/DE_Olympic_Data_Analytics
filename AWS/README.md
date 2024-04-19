@@ -35,7 +35,7 @@
         - objetct -> olympic-data-analytics/
 
 ###### General S3 Stage Data
-        - bucket -> YOUR RAW ZONE BUCKET
+        - bucket -> YOUR STAGE ZONE BUCKET
         - objetct -> olympic-data-analytics/
 
 #### AWS GLUE:
@@ -220,9 +220,30 @@
 
 #### AWS GLUE CATALOG:
         Databases
-        
+
 	    - Name -> olympic-data-analytics-db
 	    - Description -> olympic-data-analytics-db
+
+#### AWS REDSHIFT SERVERLESS:
+        Namespace / Workgroups
+
+	    - Namespace -> olympic-data-analytics-namespace
+	    - Workgroup -> olympic-data-analytics-workgroup
+
+        Query Editor v2
+
+	    - Serverless -> olympic-data-analytics-workgroup
+	    - data catalog ->  awsdatacatalog (Create using AWS Glue Data Catalog)
+	    - database named -> olympic-data-analytics-db
+	    - tables -> 	tbl-athletes
+			            tbl-coaches
+			            tbl-entriesgender
+			            tbl-medals
+			            tbl-teams
+
+#### AWS QuickSight
+
+        At your discretion
 
 
 ## Architecture-Diagram
