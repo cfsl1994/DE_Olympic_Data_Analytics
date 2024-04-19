@@ -181,6 +181,48 @@
         - Do not update the Data Catalog
 
 #### AWS GLUE CRAWLER:
+        Crawler properties
+
+        - Name -> Athletes
+        - IAM role -> YOUR IAM ROLE
+        - Database -> olympic-data-analytics-db
+        - State -> READY
+        - Table prefix -> tbl-
+        - Data source -> s3://YOUR RAW ZONE BUCKET/olympic-data-analytics/Athletes
+
+        - Name -> Coaches
+        - IAM role -> YOUR IAM ROLE
+        - Database -> olympic-data-analytics-db
+        - State -> READY
+        - Table prefix -> tbl-
+        - Data source -> s3://YOUR RAW ZONE BUCKET/olympic-data-analytics/Coaches
+
+        - Name -> Entriesgender
+        - IAM role -> YOUR IAM ROLE
+        - Database -> olympic-data-analytics-db
+        - State -> READY
+        - Table prefix -> tbl-
+        - Data source -> s3://YOUR RAW ZONE BUCKET/olympic-data-analytics/Entriesgender
+
+        - Name -> Medals
+        - IAM role -> YOUR IAM ROLE
+        - Database -> olympic-data-analytics-db
+        - State -> READY
+        - Table prefix -> tbl-
+        - Data source -> s3://YOUR RAW ZONE BUCKET/olympic-data-analytics/Medals
+
+        - Name -> Teams
+        - IAM role -> YOUR IAM ROLE
+        - Database -> olympic-data-analytics-db
+        - State -> READY
+        - Table prefix -> tbl-
+        - Data source -> s3://YOUR RAW ZONE BUCKET/olympic-data-analytics/Teams
+
+#### AWS GLUE CATALOG:
+        Databases
+        
+	    - Name -> olympic-data-analytics-db
+	    - Description -> olympic-data-analytics-db
 
 
 ## Architecture-Diagram
