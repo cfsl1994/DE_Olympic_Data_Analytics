@@ -28,5 +28,85 @@
                 	- First row as header -> Check	
         - Request method -> GET
 
+###### Copy data Coaches
+        - Name -> Coaches
+        - Source dataset -> Coaches_Source
+                - Connection:
+                	- Linked service:
+                		- Name -> Coaches_HTTP
+                		- Description -> Coaches_HTTP
+                		- Connect via integration runtime -> AutoResolverIntegrationRuntime
+                		- Base URL -> https://raw.githubusercontent.com/YOUR_GITHUB/main/data/Coaches.csv
+                		- Server certification validation -> Disable
+                		- Authentication type -> Anonymous
+
+                	- Column type -> Semicolon 
+                	- Row delimiter -> Default (\r\n, or \r\n)
+                	- Encoding -> Default(UTF-8)
+                	- Quote character -> Double quote (")
+                	- Escape character -> Backslash (\)
+                	- First row as header -> Check	
+        - Request method -> GET
+
+###### Copy data EntriesGender
+        - Name -> EntriesGender
+        - Source dataset -> EntriesGender_Source
+                - Connection:
+                	- Linked service:
+                		- Name -> EntriesGender_HTTP
+                		- Description -> EntriesGender_HTTP
+                		- Connect via integration runtime -> AutoResolverIntegrationRuntime
+                		- Base URL -> https://raw.githubusercontent.com/YOUR_GITHUB/main/data/EntriesGender.csv
+                		- Server certification validation -> Disable
+                		- Authentication type -> Anonymous
+
+                	- Column type -> Semicolon 
+                	- Row delimiter -> Default (\r\n, or \r\n)
+                	- Encoding -> Default(UTF-8)
+                	- Quote character -> Double quote (")
+                	- Escape character -> Backslash (\)
+                	- First row as header -> Check	
+        - Request method -> GET
+
+###### Copy data Medals
+        - Name -> Medals
+        - Source dataset -> Medals_Source
+                - Connection:
+                	- Linked service:
+                		- Name -> Medals_HTTP
+                		- Description -> Medals_HTTP
+                		- Connect via integration runtime -> AutoResolverIntegrationRuntime
+                		- Base URL -> https://raw.githubusercontent.com/YOUR_GITHUB/main/data/Medals.csv
+                		- Server certification validation -> Disable
+                		- Authentication type -> Anonymous
+
+                	- Column type -> Semicolon 
+                	- Row delimiter -> Default (\r\n, or \r\n)
+                	- Encoding -> Default(UTF-8)
+                	- Quote character -> Double quote (")
+                	- Escape character -> Backslash (\)
+                	- First row as header -> Check	
+        - Request method -> GET
+
+###### Copy data Teams
+        - Name -> Teams
+        - Source dataset -> Teams_Source
+                - Connection:
+                	- Linked service:
+                		- Name -> Teams_HTTP
+                		- Description -> Teams_HTTP
+                		- Connect via integration runtime -> AutoResolverIntegrationRuntime
+                		- Base URL -> https://raw.githubusercontent.com/YOUR_GITHUB/main/data/Teams.csv
+                		- Server certification validation -> Disable
+                		- Authentication type -> Anonymous
+
+                	- Column type -> Semicolon 
+                	- Row delimiter -> Default (\r\n, or \r\n)
+                	- Encoding -> Default(UTF-8)
+                	- Quote character -> Double quote (")
+                	- Escape character -> Backslash (\)
+                	- First row as header -> Check	
+        - Request method -> GET
+
 ## Architecture-Diagram
 ![Architecture-Diagram](Olympic-Data-Analytics-Azure.jpg)
