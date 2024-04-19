@@ -52,7 +52,7 @@
         - Spark UI logs path -> YOUR LOG PATH BUCKET
 
 ###### ETL Visual
-        - Data Source Properties - S3
+        Data Source Properties - S3
 
         - Name -> Athletes Source
         - S3 source type ->  S3 location
@@ -94,7 +94,7 @@
         - Quote character -> Double quote (")
         - First line of source file contains column headers
 
-        - Transform
+        Transform
 
         - Name -> Change Schema Athletes
         - Node parents -> Athletes Source
@@ -142,6 +142,46 @@
         		noc		Country		string
         		discipline	discipline	string
         		event		event		string
+
+        Data target properties - S3
+
+        - Name -> Athletes Destination
+        - Node parents -> Change Schema Athletes
+        - Format -> Parquet
+        - Compression Type -> Snappy
+        - S3 Target Location -> s3://YOUR STAGE ZONE BUCKET/olympic-data-analytics/Athletes/
+        - Do not update the Data Catalog
+
+        - Name -> Teams Destination
+        - Node parents -> Change Schema Teams
+        - Format -> Parquet
+        - Compression Type -> Snappy
+        - S3 Target Location -> s3://YOUR STAGE ZONE BUCKET/olympic-data-analytics/Teams/
+        - Do not update the Data Catalog
+
+        - Name -> Medals Destination
+        - Node parents -> Change Schema Medals
+        - Format -> Parquet
+        - Compression Type -> Snappy
+        - S3 Target Location -> s3://YOUR STAGE ZONE BUCKET/olympic-data-analytics/Medals/
+        - Do not update the Data Catalog
+
+        - Name -> Entriesgender Destination
+        - Node parents -> Change Schema Entriesgender
+        - Format -> Parquet
+        - Compression Type -> Snappy
+        - S3 Target Location -> s3://YOUR STAGE ZONE BUCKET/olympic-data-analytics/Entriesgender/
+        - Do not update the Data Catalog
+
+        - Name -> Coaches Destination
+        - Node parents -> Change Schema Coaches
+        - Format -> Parquet
+        - Compression Type -> Snappy
+        - S3 Target Location -> s3://YOUR STAGE ZONE BUCKET/olympic-data-analytics/Coaches/
+        - Do not update the Data Catalog
+
+#### AWS GLUE CRAWLER:
+
 
 ## Architecture-Diagram
 ![Architecture-Diagram](Olympic-Data-Analytics-Aws.jpg)
