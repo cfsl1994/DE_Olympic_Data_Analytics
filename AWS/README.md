@@ -29,5 +29,27 @@
         - Compatible runtimes -> python3.10
         - Compatible architectures -> x86_64
 
+#### AWS S3:
+###### General S3 Raw Data
+        - bucket -> YOUR BUCKET RAW DATA
+        - objetct -> olympic-data-analytics/
+
+###### General S3 Raw Data
+        - bucket -> YOUR BUCKET STAGE DATA
+        - objetct -> olympic-data-analytics/
+
+#### AWS GLUE:
+###### Basic properties
+        - Etl job name -> Olympic_Data_Analytics_Glue_Job
+        - IAM Role -> YOUR IAM ROLE
+        - Type -> Spark
+        - Glue version -> Glue 4.0 - Supports spark 3.3, Scala 2, Python 3
+        - Language -> Python 3
+        - Worker type -> G 1X
+        
+###### Advanced properties
+        - Script path -> YOUR SCRIPT PATH BUCKET
+        - Spark UI logs path -> YOUR LOG PATH BUCKET
+
 ## Architecture-Diagram
 ![Architecture-Diagram](Olympic-Data-Analytics-Aws.jpg)
