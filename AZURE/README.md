@@ -223,5 +223,48 @@
         - container -> olympic-data-analytics
         - properties -> Data Lake Storage -> Hierarchical namespace
 
+#### AZURE DATABRICKS:
+        - azure databricks service -> data-engineering-databricks
+        - resource group -> data-engineering
+        - subscription -> YOUR SUBSCRIPTION
+###### COMPUTE       
+        - name -> olympic-data-analytic's Cluster
+        - runtime -> 12.2
+        - policy -> Unrestricted
+        - access mode -> single user
+        - performance -> 12.2 LTS (includes Apache Spark 3.3.2, Scala 2.12) 
+        - worker type -> Standar_DS3_V2
+        - driver type -> Standar_DS3_V2
+        - catalog explorer:
+                - storage credentials: 
+                        - name -> adls-data-engineering-raw-credential-name-storage:
+                                - credential -> managed identity
+                                - properties -> YOUR CONNECTOR ID FROM ACCESS CONNECTOR FOR AZURE DATABRICKS - RAW ZONE STORAGE
+                        - name -> adls-data-engineering-stage-credential-name-storage:
+                                - credential -> managed identity
+                                - properties -> YOUR CONNECTOR ID FROM ACCESS CONNECTOR FOR AZURE DATABRICKS - RAW ZONE STORAGE
+                - external locations:
+                        - name -> adls-data-engineering-raw-external-location:
+                                - credential -> adls-data-engineering-raw-credential-name-storage
+                                - url -> abfss://olympic-data-analytics@RAW ZONE STORAGE.dfs.core.windows.net/
+                        - name -> adls-data-engineering-raw-external-location:
+                                - credential -> adls-data-engineering-stage-credential-name-storage
+                                - url -> abfss://olympic-data-analytics@STAGE ZONE STORAGE.dfs.core.windows.net/
+
+###### WORKSPACE
+        - notebook -> olympic-data-analytics-notebook 
+
+###### ACCESS CONNECTOR FOR AZURE DATABRICKS - RAW ZONE STORAGE
+        - name -> adls-data-engineering-raw-access-connector
+        - resource group -> data-engineering
+        - subscription -> YOUR SUBSCRIBER
+
+###### ACCESS CONNECTOR FOR AZURE DATABRICKS - STAGE ZONE STORAGE
+        - name -> adls-data-engineering-stage-access-connector
+        - resource group -> data-engineering
+        - subscription -> YOUR SUBSCRIBER
+
+
+
 ## Architecture-Diagram
 ![Architecture-Diagram](Olympic-Data-Analytics-Azure.jpg)
