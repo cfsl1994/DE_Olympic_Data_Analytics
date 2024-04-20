@@ -264,7 +264,58 @@
         - resource group -> data-engineering
         - subscription -> YOUR SUBSCRIBER
 
+#### AZURE SYNAPSE ANALYTICS
+        - name -> data-engineering-synap
+        - type -> synapse workspace
+        - resource group -> data-engineering
+        - subscription -> YOUR SUBSCRIPTION
 
+###### DATA BASE LAKE
+        - name -> olympic_data_analytics_db
+        - source -> data external (STAGE ZONE STORAGE)
+
+###### tables athletes
+        - general:
+                - name -> tbl_athletes
+                - link service -> YOUR WORKSPACE SYNAPSE 
+                - folder -> olympic-data-analytics/athletes
+                - data format -> parquet
+                - compression -> none
+
+###### tables coaches
+        - general:
+                - name -> tbl_coaches
+                - link service -> YOUR WORKSPACE SYNAPSE 
+                - folder -> olympic-data-analytics/coaches
+                - data format -> parquet
+                - compression -> none
+
+###### tables entriesgender
+        - general:
+                - name -> tbl_entriesgender
+                - link service -> YOUR WORKSPACE SYNAPSE 
+                - folder -> olympic-data-analytics/entriesgender
+                - data format -> parquet
+                - compression -> none
+
+###### tables medals
+        - general:
+                - name -> tbl_medals
+                - link service -> YOUR WORKSPACE SYNAPSE 
+                - folder -> olympic-data-analytics/medals
+                - data format -> parquet
+                - compression -> none
+
+###### tables teams
+        - general:
+                - name -> tbl_teams
+                - link service -> YOUR WORKSPACE SYNAPSE 
+                - folder -> olympic-data-analytics/teams
+                - data format -> parquet
+                - compression -> none
+
+#### POWER BI
+        - At your discretion
 
 ## Architecture-Diagram
 ![Architecture-Diagram](Olympic-Data-Analytics-Azure.jpg)
