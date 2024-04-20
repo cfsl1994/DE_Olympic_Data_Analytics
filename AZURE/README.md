@@ -252,7 +252,7 @@
                                 - url -> abfss://olympic-data-analytics@STAGE ZONE STORAGE.dfs.core.windows.net/
 
 ###### WORKSPACE
-        - notebook -> olympic-data-analytics-notebook 
+        - notebook -> olympic-data-analytics-notebook.ipynb 
 
 ###### ACCESS CONNECTOR FOR AZURE DATABRICKS - RAW ZONE STORAGE
         - name -> adls-data-engineering-raw-access-connector
