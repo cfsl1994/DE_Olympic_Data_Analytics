@@ -41,6 +41,18 @@
                    Rename Name to 'PersonName'
                    Rename NOC to 'Country'
 
+###### OUTPUT ATHLETES
+        - Manual Settings:
+                - Options:
+                        - Enviroment -> Dataflow
+                        - Profiling -> yes
+                        - Validate schema -> yes
+                - Publishing actions
+                        - Replace AVRO
+                        - Location -> gs://YOUR DATA STAGE ZONE STORAGE/olympic-data-analytics/Athletes.avro 
+                        - Settings -> multiples files
+                        - Service account -> YOUR SERVICE ACCOUNT
+
 ###### DATASET COACHES
         - Parameters -> gs://YOUR DATA RAW ZONE STORAGE/olympic-data-analytics/Coaches.csv
 
@@ -48,12 +60,36 @@
          - Steps -> Convert row 1 to header
                    Rename NOC to 'Country'
 
+###### OUTPUT COACHES
+- Manual Settings:
+                - Options:
+                        - Enviroment -> Dataflow
+                        - Profiling -> yes
+                        - Validate schema -> yes
+                - Publishing actions
+                        - Replace AVRO
+                        - Location -> gs://YOUR DATA STAGE ZONE STORAGE/olympic-data-analytics/Coaches.avro 
+                        - Settings -> multiples files
+                        - Service account -> YOUR SERVICE ACCOUNT
+
 ###### DATASET MEDALS
         - Parameters -> gs://YOUR DATA RAW ZONE STORAGE/olympic-data-analytics/Medals.csv
 
 ###### RECIPE MEDALS
         - Steps -> Rename Team/NOC to 'Team_Country'
                    Rename Rank by Total to 'Rank_by_Total'
+
+###### OUTPUT MEDALS
+- Manual Settings:
+                - Options:
+                        - Enviroment -> Dataflow
+                        - Profiling -> yes
+                        - Validate schema -> yes
+                - Publishing actions
+                        - Replace AVRO
+                        - Location -> gs://YOUR DATA STAGE ZONE STORAGE/olympic-data-analytics/Medals.avro 
+                        - Settings -> multiples files
+                        - Service account -> YOUR SERVICE ACCOUNT
 
 ###### DATASET TEAMS
         - Parameters -> gs://YOUR DATA RAW ZONE STORAGE/olympic-data-analytics/Teams.csv
@@ -63,11 +99,35 @@
                    Rename Name to 'TeamName'
                    Rename NOC to 'Country'
 
+###### OUTPUT TEAMS
+- Manual Settings:
+                - Options:
+                        - Enviroment -> Dataflow
+                        - Profiling -> yes
+                        - Validate schema -> yes
+                - Publishing actions
+                        - Replace AVRO
+                        - Location -> gs://YOUR DATA STAGE ZONE STORAGE/olympic-data-analytics/Teams.avro 
+                        - Settings -> multiples files
+                        - Service account -> YOUR SERVICE ACCOUNT
+
 ###### DATASET ENTRIESGENDER
         - Parameters -> gs://YOUR DATA RAW ZONE STORAGE/olympic-data-analytics/EntriesGender.csv
 
 ###### RECIPE ENTRIESGENDER
         - Steps -> None
+
+###### OUTPUT ENTRIESGENDER
+- Manual Settings:
+                - Options:
+                        - Enviroment -> Dataflow
+                        - Profiling -> yes
+                        - Validate schema -> yes
+                - Publishing actions
+                        - Replace AVRO
+                        - Location -> gs://YOUR DATA STAGE ZONE STORAGE/olympic-data-analytics/EntriesGender.avro 
+                        - Settings -> multiples files
+                        - Service account -> YOUR SERVICE ACCOUNT
 
 #### GCP LOOKER
         - At your discretion
