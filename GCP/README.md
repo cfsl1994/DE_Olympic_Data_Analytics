@@ -129,6 +129,50 @@
                                 - Settings -> multiples files
                                 - Service account -> YOUR SERVICE ACCOUNT
 
+#### GCP BIGQUERY
+###### DB
+        name -> olympic_data_analytics_db
+
+###### DATASET TBL_ATHLETES
+        - Id table -> YOUR SERVICE ACCOUNT/olympic_data_analytics_db.tbl_athletes
+        - External storage
+                - uri source -> gs://YOUR DATA STAGE ZONE/olympic-data-analytics/Athletes.avro/2024-04-16_13-30-01_00000000
+        - Format -> AVRO
+        - Detection schema -> true
+        - Tag -> YOUR SERVICE ACCOUNT/olympic_data_analytics_tag:olympic_data_analytics_tag
+
+###### DATASET TBL_COACHES
+        - Id table -> YOUR SERVICE ACCOUNT/olympic_data_analytics_db.tbl_coaches
+        - External storage
+                - uri source -> gs://YOUR DATA STAGE ZONE/olympic-data-analytics/Coaches.avro/2024-04-18_02-26-08_00000000
+        - Format -> AVRO
+        - Detection schema -> true
+        - Tag -> YOUR SERVICE ACCOUNT/olympic_data_analytics_tag:olympic_data_analytics_tag
+
+###### DATASET TBL_ENTRIESGENDER
+        - Id table -> YOUR SERVICE ACCOUNT/olympic_data_analytics_db.tbl_entriesgender
+        - External storage
+                - uri source -> gs://YOUR DATA STAGE ZONE/olympic-data-analytics/Coaches.avro/2024-04-18_02-50-24_00000000
+        - Format -> AVRO
+        - Detection schema -> true
+        - Tag -> YOUR SERVICE ACCOUNT/olympic_data_analytics_tag:olympic_data_analytics_tag
+
+###### DATASET TBL_MEDALS
+        - Id table -> YOUR SERVICE ACCOUNT/olympic_data_analytics_db.tbl_medals
+        - External storage
+                - uri source -> gs://YOUR DATA STAGE ZONE/olympic-data-analytics/Coaches.avro/2024-04-18_02-30-59_00000000
+        - Format -> AVRO
+        - Detection schema -> true
+        - Tag -> YOUR SERVICE ACCOUNT/olympic_data_analytics_tag:olympic_data_analytics_tag
+
+###### DATASET TBL_TEAMS
+        - Id table -> YOUR SERVICE ACCOUNT/olympic_data_analytics_db.tbl_teams
+        - External storage
+                - uri source -> gs://YOUR DATA STAGE ZONE/olympic-data-analytics/Coaches.avro/2024-04-18_02-36-19_00000000
+        - Format -> AVRO
+        - Detection schema -> true
+        - Tag -> YOUR SERVICE ACCOUNT/olympic_data_analytics_tag:olympic_data_analytics_tag
+
 #### GCP LOOKER
         - At your discretion
 
