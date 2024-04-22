@@ -61,16 +61,16 @@
                    Rename NOC to 'Country'
 
 ###### OUTPUT COACHES
-- Manual Settings:
-                - Options:
-                        - Enviroment -> Dataflow
-                        - Profiling -> yes
-                        - Validate schema -> yes
-                - Publishing actions
-                        - Replace AVRO
-                        - Location -> gs://YOUR DATA STAGE ZONE STORAGE/olympic-data-analytics/Coaches.avro 
-                        - Settings -> multiples files
-                        - Service account -> YOUR SERVICE ACCOUNT
+        - Manual Settings:
+                        - Options:
+                                - Enviroment -> Dataflow
+                                - Profiling -> yes
+                                - Validate schema -> yes
+                        - Publishing actions
+                                - Replace AVRO
+                                - Location -> gs://YOUR DATA STAGE ZONE STORAGE/olympic-data-analytics/Coaches.avro 
+                                - Settings -> multiples files
+                                - Service account -> YOUR SERVICE ACCOUNT
 
 ###### DATASET MEDALS
         - Parameters -> gs://YOUR DATA RAW ZONE STORAGE/olympic-data-analytics/Medals.csv
